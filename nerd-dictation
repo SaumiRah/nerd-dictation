@@ -170,7 +170,7 @@ def simulate_typing_with_xdotool(delete_prev_chars: int, text: str) -> None:
 # Simulate Input: YDOTOOL
 #
 def simulate_typing_with_ydotool(delete_prev_chars: int, text: str) -> None:
-    cmd = "ydotool"
+    cmd = "/usr/bin/ydotool"
 
     # No setup/tear-down.
     if delete_prev_chars == SIMULATE_INPUT_CODE_COMMAND:
@@ -200,7 +200,7 @@ def simulate_typing_with_ydotool(delete_prev_chars: int, text: str) -> None:
         [
             cmd,
             "type",
-            "--next-delay",
+            "--key-delay",
             "5",
             "--",
             text,
